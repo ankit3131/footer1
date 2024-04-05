@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main_menu</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+.top_header{
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 4em;
+    padding-top: 1em;
+    margin-left: 4em;
+}
+.top_logo img{
+    max-width: 390px;
+    width:390px;
+}
+        /* menu section */
+        .header_section {
+            background-image: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            height: 100vh;
+        }
+        .phone_num a{
+    text-decoration: none;
+    font-size: 1.6em;
+    color: #fff;
+        }
+/* .header_section .main_menu nav ul{
+display: flex;
+margin-left: 1em;
+} */
+.header_section ul li{
+    list-style-type: none;
+    color:#fff;
+    cursor: pointer;
+    padding:10px;
+}
+.header_section ul li:hover{
+background:#333;
+
+}
+.header_section .main_menu nav ul{
+       display: flex;
+    justify-content: space-evenly;
+    font-size: 22px;
+    margin-top:0em;
+}
+#humbrger{
+    display: none;
+}
+@media screen and (min-width:700px) and (max-width:925px){
+    .header_section .main_menu nav ul{
+    font-size:19px;
+}
+}
+@media screen and (min-width:700px) and (max-width:805px){
+    .header_section .main_menu nav ul{
+font-size:15px;
+    }
+}
+
+@media screen and (min-width:350px) and (max-width:700px){
+#menu_active{
+    display: none;
+}
+.top_logo img{
+max-width: 243px;
+}
+.header_section .main_menu nav ul{
+    display: block;
+    padding:0px 61px 0px 61px;
+}
+#humbrger{
+    display: block;
+    font-size:2em;
+    color:#fff;
+}
+.phone_num a{
+    display: none;
+}
+}
+    </style>
+</head>
+
+<body>
+    <header class="header_section">
+<div class="top_header">
+<div class="top_logo">
+            <img src="header/vlogo.svg" alt="logo">
+ </div>
+ <div class="phone_num">
+    <a href="tel:(817) 203-2220">(817) 203-2220</a>
+    <label id="humbrger" for="menu-icon">&#9776;</label>
+</div>
+</div>
+        <div id="menu_active" class="main_menu">
+            <nav>
+                <ul>
+                    <li class="btn">Our Firm</li>
+                    <li class="btn">Our Team</li>
+                    <li class="btn">Criminal Defense</li>
+                    <li class="btn">Personal Injury</li>
+                    <li class="btn">Family Law</li>
+                    <li class="btn">Locations</li>
+                    <li class="btn">Contact</li>
+                </ul>
+            </nav>
+            </div>
+    </header>
+<script>
+    let mobilemenu = document.getElementById("humbrger");
+    mobilemenu.addEventListener("click", function() {
+        debugger;
+        let menu = document.getElementById("menu_active");
+        if(menu.style.display === "none"){
+            debugger;
+        menu.style.display = "block";
+        }
+        else {
+            menu.style.display = "none";
+        }
+    });
+   
+</script>
+</body>
+
+</html>
